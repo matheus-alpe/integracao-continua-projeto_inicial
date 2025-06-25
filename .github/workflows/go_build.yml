@@ -1,7 +1,10 @@
 name: Go BUILD
 
 on:
-  push:
+  workflow_run:
+    workflows: ["Go CI"]
+    types:
+      - completed
     branches: ["master"]
 
 jobs:
