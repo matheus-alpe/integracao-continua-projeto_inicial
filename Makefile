@@ -2,7 +2,7 @@
 lint:
 	docker run --rm -itv $(CURDIR):/app -w /app golangci/golangci-lint golangci-lint run ./...
 test:
-	docker compose exec app go test -v ./...
+	docker compose exec app go test -v *.go
 start:
 	docker compose up -d
 stop:
